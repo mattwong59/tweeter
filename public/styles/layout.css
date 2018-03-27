@@ -28,9 +28,13 @@ body {
 
 main {
   width: 450px;
+  height: 550px;
   background-color: white;
   margin: auto;
   padding-top: 140px;
+  padding-left: 2em;
+  padding-right: 2em;
+
 }
 
 
