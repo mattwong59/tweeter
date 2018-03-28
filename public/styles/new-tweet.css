@@ -1,7 +1,7 @@
 .new-tweet {
-    border: solid 1px #bcb9b9;
-    border-radius: 5px;
-    background-color: #e5e4e4;
+  border: solid 1px #bcb9b9;
+  border-radius: 5px;
+  background-color: #e5e4e4;
 }
 
 .new-tweet h2 {
@@ -12,6 +12,53 @@
 
 .new-tweet .counter {
   float: right;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  padding-right: 10px;
+  background-color: #ffe712;
+  margin: 10px;
+}
+
+#all-tweets h3{
+  background-color: #e5e4e4;
+  padding: 0 10px 0 10px;
+  margin-top: 0px;
+}
+
+article {
+  border: solid 1px #bcb9b9;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #e5e4e4;
+}
+
+h2 {
+  width: 65%;
+  margin-top: 8px;
+}
+
+h4 {
+  opacity: 0.6;
+  margin: 13px 10px 0 0;
+}
+
+h5 {
+  border-top: 1px solid #bcb9b9;
+  padding: 10px 10px 0 5px;
+  opacity: 0.9;
+  font-size: 13px;
+}
+
+p {
+  padding: 30px 10px 30px 10px;
 }
 
 textarea {

@@ -44,12 +44,28 @@
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form method="POST" action="/tweets/">
-          <section id="all-tweets">
-            <textarea name="text" placeholder="What are you humming about?"></textarea>
-            <input type="submit" value="Tweet">
-            <span class="counter">140</span>
-          </section>
+          <textarea name="text" placeholder="What are you humming about?"></textarea>
+          <input type="submit" value="Tweet">
+          <span class="counter">140</span>
         </form>
+      </section>
+
+      <section id="all-tweets">
+        <article>
+
+          <header>
+            <img class="avatar" src="/images/bird.png">
+            <h2>Bill Fields</h2>
+            <h4>@MrFields</h4>
+          </header>
+
+          <p>Little Tweet here</p>
+
+          <footer>
+            <h5>10 days ago</h5>
+          </footer>
+
+        </article>
       </section>
     </main>
 
