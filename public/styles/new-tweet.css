@@ -1,18 +1,4 @@
-.avatar {
-  width: 60px;
-  height: 60px;
-  padding-right: 10px;
-  background-color: #ffe712;
-  margin: 10px;
-}
-
-.icon {
-  float: right;
-  width: 20px;
-  height: 20px;
-  margin: 2px;
-  color: white;
-}
+/* NEW TWEET SECTION */
 
 .new-tweet .counter {
   float: right;
@@ -30,32 +16,29 @@
   margin: 10px;
 }
 
-#all-tweets h3{
-  background-color: #e5e4e4;
-  padding: 0 10px 0 10px;
-  margin-top: 0px;
-}
-
-article {
-  border: solid 1px #bcb9b9;
-  border-radius: 5px;
-  margin-top: 20px;
-}
-
-article:hover {
-  border: 1px solid black;
-}
-
-article:hover .icon {
-  color: #00a087;
-}
-
-article:hover header {
-  opacity: 1;
-}
-
 form {
   padding: 0 1rem 0 1rem;
+}
+
+input {
+  margin-bottom: 14px;
+}
+
+textarea {
+  width: 100%;
+  padding: 5px;
+  margin-top: 7px;
+}
+
+/*ALL TWEETS SECTION */
+/* Header Styles   */
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  padding-right: 10px;
+  background-color: #ffe712;
+  margin: 10px;
 }
 
 header {
@@ -75,15 +58,30 @@ h4 {
   margin: 13px 10px 0 0;
 }
 
-h5 {
+/* ALL TWEETS BODY  */
 
-  padding: 0 10px;
-  opacity: 0.9;
-  font-size: 13px;
+article {
+  border: solid 1px #bcb9b9;
+  border-radius: 5px;
+  margin-top: 20px;
 }
 
-input {
-  margin-bottom: 14px;
+article:hover {
+  border: 1px solid black;
+}
+
+article:hover .icon {
+  color: #00a087;
+}
+
+article:hover header {
+  opacity: 1;
+}
+
+#all-tweets h3{
+  background-color: #e5e4e4;
+  padding: 0 10px 0 10px;
+  margin-top: 0px;
 }
 
 p {
@@ -92,13 +90,22 @@ p {
   height: 120px;
 }
 
-textarea {
-  width: 100%;
-  padding: 5px;
-  margin-top: 7px;
+/* FOOTER */
+
+h5 {
+
+  padding: 0 10px;
+  opacity: 0.9;
+  font-size: 13px;
 }
 
-
+.icon {
+  float: right;
+  width: 20px;
+  height: 20px;
+  margin: 2px;
+  color: white;
+}
 
 
 
