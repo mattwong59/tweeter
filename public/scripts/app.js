@@ -70,19 +70,25 @@ $(function() {
 
   $('form').on('submit', function(event) {
     event.preventDefault();
-
     let data = $('form').serialize();
-
     $.post('/tweets', data).done(function(response) {
 
     })
+    $('textarea').val('');
   })
+
+  function loadTweets() {
+    $.get('/tweets').done(function(response) {
+      renderTweets(response);
+    });
+  }
+  loadTweets();
 
   function renderTweets(tweets) {
     for (let eachTweet in tweets) {
       let tweet = tweets[eachTweet];
       let newTweet = createTweetElement(tweet);
-      $('#tweets-container').append(newTweet);
+      $('#tweets-container').prepend(newTweet);
     }
   }
 
@@ -134,7 +140,7 @@ $(function() {
     return $tweet;
   }
 
-  renderTweets(data);
+  //renderTweets();
 });
 
 
