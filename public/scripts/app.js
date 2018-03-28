@@ -68,6 +68,16 @@ const data = [
 
 $(function() {
 
+  $('form').on('submit', function(event) {
+    event.preventDefault();
+
+    let data = $('form').serialize();
+
+    $.post('/tweets', data).done(function(response) {
+
+    })
+  })
+
   function renderTweets(tweets) {
     for (let eachTweet in tweets) {
       let tweet = tweets[eachTweet];
