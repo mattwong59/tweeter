@@ -1,4 +1,3 @@
-
 $(function() {
  $('textarea').on('input', function (event) {
     var count = $(event.target).val().length;
