@@ -71,15 +71,22 @@ $(function() {
   $('form').on('submit', function(event) {
     event.preventDefault();
     let data = $('form').serialize();
-    $.post('/tweets', data).done(function(response) {
 
-    })
-    $('textarea').val('');
+    if(data && (data.length - 5) <= 140) {
+      console.log("Success!!!!!!!!!")
+      console.log(data.length);
+      $.post('/tweets', data).done(function(response) {
+      })
+      $('textarea').val('');
+    }
+
+
   })
 
+//GET REQUEST TO /TWEETS
   function loadTweets() {
-    $.get('/tweets').done(function(response) {
-      renderTweets(response);
+    $.get('/tweets').done(function(tweetsData) {
+      renderTweets(tweetsData);
     });
   }
   loadTweets();
