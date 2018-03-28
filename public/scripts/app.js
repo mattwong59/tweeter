@@ -69,7 +69,7 @@ const data = [
 $(function() {
 
   function renderTweets(tweets) {
-    for(eachTweet in tweets) {
+    for (let eachTweet in tweets) {
       let tweet = tweets[eachTweet];
       let newTweet = createTweetElement(tweet);
       $('#tweets-container').append(newTweet);
@@ -124,7 +124,7 @@ $(function() {
     return $tweet;
   }
 
-renderTweets(data);
+  renderTweets(data);
 });
 
 

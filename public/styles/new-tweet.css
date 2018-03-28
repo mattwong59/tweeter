@@ -36,6 +36,7 @@ textarea {
 .avatar {
   width: 60px;
   height: 60px;
+  border-radius: 5px;
   background-color: #ffe712;
   margin: 10px;
 }
