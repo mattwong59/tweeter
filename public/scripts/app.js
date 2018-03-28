@@ -25,8 +25,9 @@ $(function() {
 
   function createTweetElement(tweet) {
 
+    //Data from tweet
     let username = tweet.user.name;
-    let handle = tweet.handle;
+    let handle = tweet.user.handle;
     let avatar = tweet.user.avatars.small;
     let content = tweet.content.text;
     let day = new Date(tweet.created_at);
@@ -39,6 +40,10 @@ $(function() {
     let $header = $('<header>');
     $tweet.append($header);
 
+    let $avatar = $('<img>').addClass('avatar');
+    $avatar.attr('src', avatar);
+    $header.append($avatar);
+
     let $username = $('<h2>');
     $username.text(username);
     $header.append($username);
@@ -47,30 +52,27 @@ $(function() {
     $handle.text(handle);
     $header.append($handle);
 
-    let $avatar = $('<img>').addClass('avatar');
-    $avatar.attr('src', avatar);
-    $header.append($avatar);
-
     let $content = $('<p>')
+    $content.text(content);
     $tweet.append($content);
 
     let $footer = $('<footer>');
     $tweet.append($footer);
 
-    let $days = $('<p>').addClass("Days");
+    let $days = $('<h5>')  //.addClass("Days");
     $days.text(days);
     $footer.append($days);
 
-
-    let $date = $('<h5>')
     let $iconHeart = $('<i>').addClass('icon fas fa-heart');
-    let $iconRetweet = $('<i>').addClass('icon fas fa-retweet');
-    let $iconFlagg = $('<i>').addClass('icon fas fa-flag');
+    $days.append($iconHeart);
 
+    let $iconRetweet = $('<i>').addClass('icon fas fa-retweet');
+    $days.append($iconRetweet);
+
+    let $iconFlag = $('<i>').addClass('icon fas fa-flag');
+    $days.append($iconFlag);
 
     return $tweet;
-    //console.log($tweet);
-
   }
 
 $('#tweets-container').append($tweet);
