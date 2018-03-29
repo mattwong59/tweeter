@@ -71,16 +71,21 @@ $(function() {
   $('form').on('submit', function(event) {
     event.preventDefault();
     let data = $('form').serialize();
+    let tweetText = data.slice(5);
 
-    if(data && (data.length - 5) <= 140) {
-      console.log("Success!!!!!!!!!")
-      console.log(data.length);
-      $.post('/tweets', data).done(function(response) {
-      })
-      $('textarea').val('');
-    }
-
-
+    if (tweetText.length > 140) {
+      console.log("OVER")
+      $.flash("Your tweets too long. Tweet must be 140 characters or less!");
+    } else if (!tweetText) {
+        console.log("00000000")
+        $.flash("Please input some text to send out your tweet.");
+    } else if (tweetText.length <= 140) {
+        console.log("Success!!!!!!!!!")
+        console.log(data.length);
+        $.post('/tweets', data).done(function(response) {
+        })
+        $('textarea').val('');
+      }
   })
 
 //GET REQUEST TO /TWEETS
