@@ -82,9 +82,10 @@ $(function() {
           $('textarea').val('');
           loadTweets();
         })
-
       }
   })
+
+
 
 //GET REQUEST TO /TWEETS
   function loadTweets() {
