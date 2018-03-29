@@ -8,12 +8,19 @@
   background-color: #00a087;
   color: #e8fdff;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
+}
+
+#nav-bar button {
+  padding: 15px;
+  border-radius: 5px;
+  color: #00a087;
 }
 
 #nav-bar .header {
   font-size: 2rem;
+  width: 90%;
 }
 
 #nav-bar .logo {
