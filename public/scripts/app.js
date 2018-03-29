@@ -67,6 +67,7 @@ const data = [
 ];
 
 $(function() {
+  $('.new-tweet').hide();
 
   $('form').on('submit', function(event) {
     event.preventDefault();
@@ -84,7 +85,6 @@ $(function() {
         })
       }
   })
-
 
 
 //GET REQUEST TO /TWEETS

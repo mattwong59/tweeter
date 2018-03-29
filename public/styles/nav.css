@@ -13,9 +13,24 @@
 }
 
 #nav-bar button {
+  width: 115px;
+  height: 57px;
   padding: 15px;
   border-radius: 5px;
+  border: 1px solid black;
   color: #00a087;
+}
+
+#nav-bar button:hover {
+  color: black;
+}
+
+#nav-bar button .pencil {
+  float: left;
+}
+
+#nav-bar button span {
+  float: right;
 }
 
 #nav-bar .header {
