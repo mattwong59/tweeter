@@ -50,8 +50,11 @@ header {
 }
 
 h2 {
-  width: 65%;
   margin-top: 8px;
+}
+
+h2.userName {
+  width: 53%;
 }
 
 h4 {
@@ -109,6 +112,5 @@ h5 {
   margin: 2px;
   color: white;
 }
-
 
 

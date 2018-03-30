@@ -50,22 +50,18 @@ $(function() {
 
   $('form').on('submit', function(event) {
     event.preventDefault();
-    let data = $('form').serialize();
-    let tweetText = data.slice(5);
-
-    if (tweetText.length > 140) {
-      $.flash("Your tweets too long. Tweet must be 140 characters or less!");
-    } else if (!tweetText) {
+    const text = $(this).find('textarea').val().trim();
+    if (text.length && text.length <= 140) {
+      $.post('/tweets', {text}).done(function(response) {
+        $('textarea').val('');
+        loadTweets();
+        });
+    } else if (text.length > 140) {
+        $.flash("Your tweets too long. Tweet must be 140 characters or less!");
+    } else {
         $.flash("Please input some text to send out your tweet.");
-    } else if (tweetText.length <= 140) {
-        $.post('/tweets', data).done(function(response) {
-          $('textarea').val('');
-          loadTweets();
-        })
-      }
+    }
   })
-
-
 //GET REQUEST TO /TWEETS
   function loadTweets() {
     $.get('/tweets').done(function(tweetsData) {
@@ -99,7 +95,7 @@ $(function() {
     $avatar.attr('src', avatar);
     $header.append($avatar);
 
-    let $username = $('<h2>');
+    let $username = $('<h2>').addClass('userName');
     $username.text(username);
     $header.append($username);
 
@@ -130,7 +126,6 @@ $(function() {
     return $tweet;
   }
 
-  //renderTweets();
 });
 
 
