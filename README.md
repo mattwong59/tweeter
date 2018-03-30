@@ -6,8 +6,8 @@ While building this app I was able to practice my HTML, CSS, JS, jQuery and AJAX
 
 ## Final Product
 
-!["Screenshot of URLs page for logged in User"]()
-!["Screenshot of Login page"]()
+!["Screenshot of Tweeter home page"](https://github.com/mattwong59/tweeter/blob/master/docs/tweeterHomePage.png)
+!["Screenshot of empty tweet error message"](https://github.com/mattwong59/tweeter/blob/master/docs/tweeterErrorMessage.png)
 
 ## Getting Started
 
