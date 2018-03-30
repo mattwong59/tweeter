@@ -4,3 +4,5 @@ node_modules/
 mongo_example.js
 in-memory-db.js
 ajax
+data-files
+.github
