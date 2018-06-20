@@ -48,10 +48,12 @@
           });
 
         $(document).click(function(){
-          flash.animate({
+          setTimeout(function() {
+            flash.animate({
             top: ($(window).height()+50)+'px',
             opacity: 0
-          });
+            });
+          }, 3000)
         });
       }
     });
